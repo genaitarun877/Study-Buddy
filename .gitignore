@@ -1,0 +1,5 @@
+logs/
+venv/
+.env/
+study_buddy.egg-info/
+results/
