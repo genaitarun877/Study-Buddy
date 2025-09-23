@@ -1,5 +1,5 @@
 logs/
 venv/
-.env/
+.env
 study_buddy.egg-info/
 results/
