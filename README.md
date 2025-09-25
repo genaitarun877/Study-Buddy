@@ -32,8 +32,8 @@ An intelligent quiz generation application powered by AI that creates personaliz
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/study-buddy-ai.git
-   cd study-buddy-ai
+   git clone https://github.com/genaitarun877/Study-Buddy.git
+   cd Study-Buddy
    ```
 
 2. **Install dependencies**
@@ -53,6 +53,12 @@ An intelligent quiz generation application powered by AI that creates personaliz
    ```
 
 5. **Open your browser** and navigate to `http://localhost:8501`
+
+## 🌐 Live Demo
+
+**Try the application online**: [https://study-buddy-by-tarun.streamlit.app/](https://study-buddy-by-tarun.streamlit.app/)
+
+Experience Study Buddy AI without any setup - just click the link and start generating quizzes!
 
 ## 🐳 Docker Deployment
 
@@ -162,8 +168,8 @@ MAX_RETRIES=3
 
 ```bash
 # Clone and install in development mode
-git clone https://github.com/yourusername/study-buddy-ai.git
-cd study-buddy-ai
+git clone https://github.com/genaitarun877/Study-Buddy.git
+cd Study-Buddy
 pip install -e .
 
 # Run with auto-reload
@@ -219,12 +225,12 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 If you have any questions or need help, please:
 
-1. Check the [Issues](https://github.com/yourusername/study-buddy-ai/issues) page
+1. Check the [Issues](https://github.com/genaitarun877/Study-Buddy/issues) page
 2. Create a new issue if your problem isn't already reported
 3. Contact the maintainer
 
 ---
 
-**Made with ❤️ by [Tarun](https://github.com/yourusername)**
+**Made with ❤️ by [Tarun](https://github.com/genaitarun877)**
 
 *Happy Learning! 🎓*
