@@ -101,6 +101,46 @@ kubectl get pods
 kubectl get services
 ```
 
+## 🏗️ Technical Architecture
+
+```mermaid
+graph TB
+    subgraph "Frontend Layer"
+        A[Streamlit UI] --> B[Quiz Manager]
+        B --> C[User Interface Components]
+    end
+    
+    subgraph "Application Layer"
+        D[Question Generator] --> E[MCQ Generator]
+        D --> F[Fill Blank Generator]
+        G[Quiz Manager] --> H[Session State]
+        G --> I[Results Evaluation]
+    end
+    
+    subgraph "AI Layer"
+        J[Groq LLM Client] --> K[Prompt Templates]
+        K --> L[MCQ Prompts]
+        K --> M[Fill Blank Prompts]
+        N[Pydantic Parser] --> O[Question Validation]
+    end
+    
+    subgraph "Data Layer"
+        P[Question Schemas] --> Q[MCQ Schema]
+        P --> R[Fill Blank Schema]
+        S[Results Export] --> T[CSV Files]
+    end
+    
+    A --> D
+    D --> J
+    J --> N
+    N --> P
+    G --> S
+    
+    style A fill:#e1f5fe
+    style J fill:#f3e5f5
+    style P fill:#e8f5e8
+```
+
 ## 🏗️ Project Structure
 
 ```
@@ -130,6 +170,30 @@ study-buddy-ai/
 │   └── utils/                # Helper functions
 │       └── helper.py
 └── logs/                     # Application logs
+```
+
+## 🔄 Application Flow
+
+```mermaid
+flowchart TD
+    A[User Opens Study Buddy AI] --> B[Configure Quiz Settings]
+    B --> C{Select Question Type}
+    C -->|Multiple Choice| D[MCQ Questions]
+    C -->|Fill in Blank| E[Fill Blank Questions]
+    D --> F[Enter Topic & Difficulty]
+    E --> F
+    F --> G[Set Number of Questions]
+    G --> H[Click Generate Quiz]
+    H --> I[AI Generates Questions]
+    I --> J[Questions Displayed]
+    J --> K[User Answers Questions]
+    K --> L[Submit Quiz]
+    L --> M[Evaluate Answers]
+    M --> N[Display Results]
+    N --> O{Export Results?}
+    O -->|Yes| P[Save to CSV]
+    O -->|No| Q[End Session]
+    P --> Q
 ```
 
 ## 🎮 How to Use
